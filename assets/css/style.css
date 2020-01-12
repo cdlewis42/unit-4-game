@@ -1,3 +1,7 @@
 body{
-    background-image:url("../images/background.png")
+    background-image:url("../images/background.png");
+}
+#container{
+    background-image:url("../images/background2.png");
+    position:center;
 }
