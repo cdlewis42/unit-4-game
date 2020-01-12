@@ -19,11 +19,72 @@ var em1=(Math.floor(Math.random() * 11+1))
 var em2=(Math.floor(Math.random() * 11+1))
 var em3=(Math.floor(Math.random() * 11+1))
 var em4=(Math.floor(Math.random() * 11+1))
-//TO DO: When button is clicked adds value to score
-//TO DO: if score matches numberTOGUESS player wins
-//TO DO if score>numberToGuess player loses
 
+//reset game function
+function resetGame(){
+    score=0;
+    em1=(Math.floor(Math.random() * 11+1));
+    em2=(Math.floor(Math.random() * 11+1));
+    em3=(Math.floor(Math.random() * 11+1));
+    em4=(Math.floor(Math.random() * 11+1));
+    numberToGuess=(Math.floor(Math.random() * 101+19));
+    $("#number").text(numberToGuess)
+}
 
-getNumber()
+//the functions for if score matches numberToGuess player wins or loses
+function playerWin(){
+    win++;
+    $("#wins").text("Wins: " + win);
+    resetGame();
+    //maybe play a sound!
+}
 
-buttonValue()
+function playerLose(){
+    loss++;
+    $("#losses").text("Losses: " + loss);
+    resetGame();
+    //maybe play a sound!
+}
+//When button is clicked adds value to score
+
+$("#button1").on("click",function(){
+    score=score+em1;
+    $("#score").text(score);
+        if (score>numberToGuess){
+            playerLose()
+        }
+        else if (playerWin===score){
+            playerWin();
+        }
+})
+$("#button2").on("click",function(){
+    score=score+em2;
+    $("#score").text(score);
+        if (score>numberToGuess){
+            playerLose()
+        }
+        else if (playerWin===score){
+            playerWin();
+        }
+})
+$("#button3").on("click",function(){
+    score=score+em3;
+    $("#score").text(score);
+        if (score>numberToGuess){
+            playerLose()
+        }
+        else if (playerWin===score){
+            playerWin();
+        }
+})
+$("#button4").on("click",function(){
+    score=score+em4;
+    $("#score").text(score);
+        if (score>numberToGuess){
+            playerLose()
+        }
+        else if (playerWin===score){
+            playerWin();
+        }
+})
+
