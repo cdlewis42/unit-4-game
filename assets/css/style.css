@@ -10,6 +10,7 @@ body{
 }
 #container{
     background-image:url("../images/background2.png");
+    background-size:cover;
     margin-left:auto;
     margin-right:auto;
     width:50%;
