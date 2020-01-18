@@ -26,7 +26,13 @@ p{
 img{
     height:50px;
     width:70px;
+    display: inline-block;
 }
 .button{
     display:inline-block;
+}
+h2{
+    position:relative;
+    bottom:60px;
+    display:inline-block
 }

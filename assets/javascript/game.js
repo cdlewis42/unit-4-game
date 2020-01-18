@@ -55,49 +55,49 @@ function playerLose(){
 $("#button1").on("click",function(){
     score=score+em1;
     //changes button to show number value.
-    $("#button1").html("<img src='assets/images/blue-emerald.jpg'><h2>"+em1+"<h2>");
+    $("#button1").html("<img src='assets/images/blue-emerald.jpg'><br><h2>"+em1+"<h2>");
 
     $("#score").text(score);
         if (score>numberToGuess){
             playerLose()
         }
-        else if (playerWin===score){
+        else if (numberToGuess===score){
             playerWin();
         }
 })
 
 $("#button2").on("click",function(){
     score=score+em2;
-    $("#button2").html("<img src='assets/images/green emerald.jpg'><h2>"+em2+"<h2>")
+    $("#button2").html("<img src='assets/images/green emerald.jpg'><br><h2>"+em2+"<h2>")
     $("#score").text(score);
         if (score>numberToGuess){
             playerLose()
         }
-        else if (playerWin===score){
+        else if (numberToGuess===score){
             playerWin();
         }
 })
 
 $("#button3").on("click",function(){
     score=score+em3;
-    $("#button3").html("<img src='assets/images/purple-emerald.jfif'><h2>"+em3+"<h2>")
+    $("#button3").html("<img src='assets/images/purple-emerald.jfif'><br><h2>"+em3+"<h2>")
     $("#score").text(score);
         if (score>numberToGuess){
             playerLose()
         }
-        else if (playerWin===score){
+        else if (numberToGuess===score){
             playerWin();
         }
 })
 
 $("#button4").on("click",function(){
     score=score+em4;
-    $("#button4").html("<img src='assets/images/red-emerald.jpg'><h2>"+em4+"<h2>")
+    $("#button4").html("<img src='assets/images/red-emerald.jpg'><br><h2>"+em4+"<h2>")
     $("#score").text(score);
         if (score>numberToGuess){
             playerLose()
         }
-        else if (playerWin===score){
+        else if (numberToGuess===score){
             playerWin();
         }
 })
